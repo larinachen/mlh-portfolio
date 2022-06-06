@@ -19,20 +19,40 @@ my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'title1', 'descripti
                 Hobby('https://picsum.photos/id/27/200/300', 'title2', 'description2'),
                 Hobby('https://picsum.photos/id/237/200/300', 'title3', 'description3') ]
 
+class Education:
+    def __init__(self, school_name, grad_year, description):
+        self.school_name = school_name
+        self.grad_year = grad_year
+        self.description = description
+
+my_education = [Education('Current School', 'Graduation year', 'brief  description of your program of study, major and the like... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
+                Education('Previous School', 'Graduation year', 'brief  description of your program of study, major and the like... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
+
+class Experience:
+    def __init__(self, experience_name, description):
+        self.experience_name = experience_name
+        self.description = description
+
+my_experiences = [Experience('Title1', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
+                 Experience('Title2', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
+
+my_additional_experiences = [Experience('Title1', 'description of volunteer work, hackathons etc... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
+                            Experience('Title2', 'description of volunteer work, hackathons etc... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
+
 
 @app.route('/')
 @app.route('/index.html')
 def index():
-   return render_template('index.html', title="About Me", firstname="First", lastname="Name", url=os.getenv("URL"))
+   return render_template('index.html', title="About Me", firstname="First", lastname="Last", url=os.getenv("URL"))
 
-@app.route('/hobbies')
+@app.route('/hobbies.html')
 def hobbies():
     return render_template('hobbies.html', hobbies=my_hobbies)
 
 
 @app.route('/experiences.html')
 def experiences():
-    return render_template('experiences.html', title="My Experiences")
+    return render_template('experiences.html', education=my_education, experiences=my_experiences, add_experiences=my_additional_experiences, title="My Experiences")
 
 
 # start the development server using the run() method
