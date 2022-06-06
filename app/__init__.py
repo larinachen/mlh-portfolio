@@ -40,6 +40,16 @@ my_additional_experiences = [Experience('Title1', 'description of volunteer work
                             Experience('Title2', 'description of volunteer work, hackathons etc... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
 
 
+class Project:
+    def __init__(self, img_url, title, description):
+        self.img_url = img_url
+        self.title = title
+        self.description = description
+
+my_projects = [Project('https://picsum.photos/id/17/200/300','project title1', 'project title1'),
+                Project('https://picsum.photos/id/200/200/300','project title2', 'project title2'),
+                Project('https://picsum.photos/id/110/200/300','project title3', 'project title3')]
+
 @app.route('/')
 @app.route('/index.html')
 def index():
@@ -54,6 +64,9 @@ def hobbies():
 def experiences():
     return render_template('experiences.html', education=my_education, experiences=my_experiences, add_experiences=my_additional_experiences, title="My Experiences")
 
+@app.route('/projects.html')
+def projects():
+    return render_template('projects.html', projects=my_projects)
 
 # start the development server using the run() method
 if __name__ == "__main__":
