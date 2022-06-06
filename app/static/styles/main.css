@@ -38,3 +38,8 @@ h3 {
     margin-left: 20px;
     margin-top: 20px;
 }
+
+.page-content{
+    background-color: #d1dce5;
+    padding: 20px;
+}

@@ -1,11 +1,7 @@
-.page-content{
-    padding: 20px;
-}
-
 .experience{
-    border: 2px solid;
-    border-style: outset;
-    border-radius: 10px;
+    background-color: #e8d9d9;
+    border-radius: 25px;
     padding: 10px;
     margin-bottom: 10px;
+    box-shadow: 2px 4px rosybrown;
 }
