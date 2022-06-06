@@ -15,9 +15,9 @@ class Hobby:
         self.description = description
 
 
-my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'title1', 'description1'),
-                Hobby('https://picsum.photos/id/27/200/300', 'title2', 'description2'),
-                Hobby('https://picsum.photos/id/237/200/300', 'title3', 'description3') ]
+my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'Recipe Development', 'I make the coolest foods :))'),
+                Hobby('https://picsum.photos/id/27/200/300', 'Biking', 'Bike is life! 🚵🚵🚵'),
+                Hobby('https://picsum.photos/id/238/200/300', 'Reading', 'Reading transports me into a world no one else has seen or will ever see') ]
 
 class Education:
     def __init__(self, school_name, grad_year, description):
@@ -46,9 +46,21 @@ class Project:
         self.title = title
         self.description = description
 
-my_projects = [Project('https://picsum.photos/id/17/200/300','project title1', 'project title1'),
-                Project('https://picsum.photos/id/200/200/300','project title2', 'project title2'),
-                Project('https://picsum.photos/id/110/200/300','project title3', 'project title3')]
+my_projects = [Project('https://picsum.photos/id/17/200/300', 'Code the World', 'Super awesome project that I cannot wait to share with everyone!'),
+                Project('https://picsum.photos/id/200/200/300','Amazing Glace', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
+                Project('https://picsum.photos/id/110/200/300', 'KiKi\'s Delivery App', 'Everything delivered fast & furious.')]
+
+class Location:
+    def __init__(self, id, loc, img_urls, title, description):
+        self.id = id
+        self.loc = loc
+        self.img_urls = img_urls
+        self.title = title
+        self.description = description
+
+my_locations = [Location('van',[43.75, 79.87],['https://picsum.photos/id/17/200/300'],'Vancouver, BC', 'my beautiful home <3'),
+                Location('ham',[45.75, 70.87],['https://picsum.photos/id/200/200/300'],'Hamilton, ON', 'where I went to Shad, my first ever tech experience'),
+                Location('otw',[66.75, 105.87],['https://picsum.photos/id/110/200/300'],'Ottawa, ON', 'just magnificent')]
 
 @app.route('/')
 @app.route('/index.html')
@@ -57,7 +69,7 @@ def index():
 
 @app.route('/hobbies.html')
 def hobbies():
-    return render_template('hobbies.html', hobbies=my_hobbies)
+    return render_template('hobbies.html', title="Hobbies",hobbies=my_hobbies, locations=my_locations)
 
 
 @app.route('/experiences.html')
@@ -66,7 +78,7 @@ def experiences():
 
 @app.route('/projects.html')
 def projects():
-    return render_template('projects.html', projects=my_projects)
+    return render_template('projects.html', title="Projects", projects=my_projects)
 
 # start the development server using the run() method
 if __name__ == "__main__":

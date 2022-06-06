@@ -1,0 +1,38 @@
+#projects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-card{
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height:auto;
+    border: 2px solid;
+    border-style: outset;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card img{
+    width: 30%;
+    aspect-ratio: 4/3;
+    padding: 5px;
+}
+
+.project-card .txt{
+    flex-direction: column;
+    margin-left: 20px;
+    border-color: #ccc;
+}
+
+.txt h4{
+    color: black;
+}
+
+h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}

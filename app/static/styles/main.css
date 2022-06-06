@@ -32,3 +32,9 @@
     color: lightgray;
 }
 
+
+/* styles shared accross all files */
+h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
