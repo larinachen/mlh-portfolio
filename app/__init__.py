@@ -27,12 +27,19 @@ my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'title1', 'descripti
 
 
 @app.route('/')
+@app.route('/index.html')
 def index():
-    return render_template('index.html', title="MLH Fellow", url=os.getenv("URL"))
+   return render_template('index.html', title="About Me", firstname="First", lastname="Name", url=os.getenv("URL"))
 
 @app.route('/hobbies')
 def hobbies():
     return render_template('hobbies.html', hobbies=my_hobbies)
+
+
+@app.route('/experiences.html')
+def experiences():
+    return render_template('experiences.html', title="My Experiences")
+
 
 # start the development server using the run() method
 if __name__ == "__main__":
