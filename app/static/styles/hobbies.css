@@ -1,0 +1,75 @@
+#hobbies-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.hobby-card{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height:auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.hobby-card img{
+    width: 30% - 20px;
+    aspect-ratio: 16/9;
+}
+
+#travel{
+    display: flex;
+    flex-direction: row;
+}
+
+#locations-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.location-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.location-card #images{
+    flex-direction: row;
+    flex-wrap: hidden;
+}
+
+.location-card #images img{
+    width: 100%;
+    aspect-ratio: 4/3;
+}
+
+
+
+/* Set the size of the div element that contains the map */
+#map {
+    height: 600px;
+    /* The height is 400 pixels */
+    width: 60%;
+    margin-left: 20px;
+    /* The width is the width of the web page */
+  }
+
+h3, h6{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+button {
+    background-color: white;
+}

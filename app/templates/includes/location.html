@@ -1,0 +1,16 @@
+<div id="{{loc.id}}" class="location-card">
+
+    <h4>{{loc.title}}</h4>
+
+    <p>{{loc.description}}</p>
+
+    <div id="images">
+        {% for url in loc.img_urls %}
+            
+            <img src="{{url}}">
+
+        {% endfor %}
+    </div>
+
+</div>
+
