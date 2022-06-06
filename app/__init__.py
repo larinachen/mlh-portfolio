@@ -31,7 +31,7 @@ my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'title1', 'descripti
 def index():
    return render_template('index.html', title="About Me", firstname="First", lastname="Name", url=os.getenv("URL"))
 
-@app.route('/hobbies')
+@app.route('/hobbies.html')
 def hobbies():
     return render_template('hobbies.html', hobbies=my_hobbies)
 
