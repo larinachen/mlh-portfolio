@@ -29,17 +29,18 @@
         {% include 'includes/nav-bar.html'  %}
 
         <!-- projects -->
-        <h3>Projects</h3>
-        <section id="projects-container">
+        <section class="page-content">
+            <h3>Projects</h3>
+            <section id="projects-container">
 
-            {% for proj in projects %}
-            
-                {% include 'includes/project.html' %}
+                {% for proj in projects %}
+                
+                    {% include 'includes/project.html' %}
 
-            {% endfor %}
+                {% endfor %}
 
+            </section>
         </section>
-
 
         <!-- footer -->
         {% include 'includes/footer.html'  %}

@@ -32,55 +32,56 @@
         {% include 'includes/nav-bar.html'  %}
 
         <!-- hobbies -->
-        <h3>Hobbies</h3>
-        <section id="hobbies-container">
+        <section class="page-content">
+            <h3>Hobbies</h3>
+            <section id="hobbies-container">
 
-            {% for hobby in hobbies %}
-            
-                {% include 'includes/hobby.html' %}
-
-            {% endfor %}
-
-        </section>
-
-        <!-- map -->
-        
-        <!-- UNCOMMENT BELOW TO DISPLAY INTERACTIVE GOOGLE MAP IF YOU HAVE A VALID GOOGLE CLOUD API KEY -->
-        <!--The div element for the map -->
-        <!-- <div id="map"></div>
-
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-            defer
-        ></script> -->
-
-        <h3>Travel</h3>
-
-        <h6><span> <button id="vancouver" onclick="display_van()">Vancouver, BC</button></span>&emsp;&emsp;&emsp;
-            <span><button  id="hamilton" onclick="display_ham()">Hamilton, ON</button></span>&emsp;&emsp;&emsp;
-            <span><button  id="ottowa" onclick="display_otw()">Ottowa, ON</button></span></h6>
-
-        <section id = 'travel'>
-        
-            <!-- interactive map -->
-            <img id="map" src="../static/img/world-map.jpg" usemap="#workmap">
-            <map name="workmap">
-                <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
-                <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
-                <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
-            </map>
-
-            <section id="locations-container">
+                {% for hobby in hobbies %}
                 
-                {% for loc in locations %}
-                
-                    {% include 'includes/location.html' %}
+                    {% include 'includes/hobby.html' %}
 
                 {% endfor %}
 
             </section>
-        </section>
 
+            <!-- map -->
+            
+            <!-- UNCOMMENT BELOW TO DISPLAY INTERACTIVE GOOGLE MAP IF YOU HAVE A VALID GOOGLE CLOUD API KEY -->
+            <!--The div element for the map -->
+            <!-- <div id="map"></div>
+
+            <script
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+                defer
+            ></script> -->
+
+            <h3>Travel</h3>
+
+            <h6><span> <button id="vancouver" onclick="display_van()">Vancouver, BC</button></span>&emsp;&emsp;&emsp;
+                <span><button  id="hamilton" onclick="display_ham()">Hamilton, ON</button></span>&emsp;&emsp;&emsp;
+                <span><button  id="ottawa" onclick="display_otw()">Ottawa, ON</button></span></h6>
+
+            <section id = 'travel'>
+            
+                <!-- interactive map -->
+                <img id="map" src="../static/img/world-map.jpg" usemap="#workmap">
+                <map name="workmap">
+                    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+                    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+                    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+                </map>
+
+                <section id="locations-container">
+                    
+                    {% for loc in locations %}
+                    
+                        {% include 'includes/location.html' %}
+
+                    {% endfor %}
+
+                </section>
+            </section>
+        </section>
         
 
         <!-- footer -->
