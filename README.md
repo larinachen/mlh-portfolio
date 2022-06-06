@@ -4,7 +4,7 @@ Web portfolio using Flask; for the Production Engineering track during the MLH F
 
 ## Description
 
-This website contains an about me page, an experiences, a projects page and a hobbies page. It is a template site upon which a user can add their own photos and text to make a personal portfolio. The experiences page, past and current education will be displayed, as well as work experiences. The projects and hobbies are meant to highlight the users strengths and share about what interests them and what makes them unique.   
+This website contains an about me page, an experiences, a projects page and a hobbies page. It is a template site upon which a user can add their own photos and text to make a personal portfolio. The experiences page, past and current education will be displayed, as well as work experiences. The projects and hobbies are meant to highlight the user's strengths and share about what interests them and what makes them unique. There's also an interactive map: the viewer can click on various locations the user has travelled to and view what the user wrote about that location.
 
 ## Installation
 
@@ -44,7 +44,7 @@ You'll now be able to access the website at `localhost:5000` or `127.0.0.1:5000`
 ## Authors
 
 - [Placid Akat](https://github.com/anAmateurKat) 
-- [Larina Chen](https://github.com/larinachen)
+- [Yundi/Larina Chen](https://github.com/larinachen)
 
 ## Licensing
 
