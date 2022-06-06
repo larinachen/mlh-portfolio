@@ -14,6 +14,12 @@ class Hobby:
         self.title = title
         self.description = description
 
+class Location:
+    def __init__(self, long_lat, title, description, img_urls):
+        self.long_lat = long_lat
+        self.title = title
+        self.description = description
+        self.img_urls = img_urls
 
 my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'title1', 'description1'),
                 Hobby('https://picsum.photos/id/27/200/300', 'title2', 'description2'),
