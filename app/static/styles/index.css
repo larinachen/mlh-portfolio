@@ -1,21 +1,21 @@
 .page-content{
     display: flex;
     justify-content: space-around;
+    background-color: #d1dce5;
 }
 
 img{
-    border: 1px;
-    border-radius: 5px;
+    border-radius: 25px;
 }
 
 
 .pic-desc, .about-me{
-    border: 2px solid;
-    border-style: outset;
-    border-radius: 10px;
-    border-color:azure;
+    background-color: #e8d9d9;
+    border-radius: 25px;
     margin: 30px;
     width: 500px;
     height: 600px;
+    padding: 10px;
+    box-shadow: 2px 4px rosybrown;
 }
 
