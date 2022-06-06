@@ -1,10 +1,10 @@
 # Portfolio Site
 
-Web portfolio using Flask; for the Production Engineering track during the MLH Fellowship.
+Web portfolio template build using Flask, for the Production Engineering track during the MLH Fellowship.
 
 ## Description
 
-This website contains an about me page, an experiences, a projects page and a hobbies page. It is a template site upon which a user can add their own photos and text to make a personal portfolio. The experiences page, past and current education will be displayed, as well as work experiences. The projects and hobbies are meant to highlight the user's strengths and share about what interests them and what makes them unique. There's also an interactive map: the user can label special locations meaningful to them and include a short description & images about that location. Viewerw can click on various locations the user has labelled and view what the user wrote about that location.
+This website contains an about me page, an experiences, a projects page and a hobbies page. It is a template site upon which a user can add their own photos and text to make a personal portfolio. The experiences page, past and current education will be displayed, as well as work experiences. The projects and hobbies are meant to highlight the user's strengths and share about what interests them and what makes them unique. There's also an interactive map: the user can label special locations meaningful to them and include a short description & images about that location. Viewers can click on various locations the user has labelled and view what the user wrote about that location.
 
 ## Installation
 
