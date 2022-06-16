@@ -15,9 +15,12 @@ class Hobby:
         self.description = description
 
 
-my_hobbies = [Hobby('https://picsum.photos/id/217/200/300', 'Recipe Development', 'I make the coolest foods :))'),
-                Hobby('https://picsum.photos/id/27/200/300', 'Biking', 'Bike is life! 🚵🚵🚵'),
-                Hobby('https://picsum.photos/id/238/200/300', 'Reading', 'Reading transports me into a world no one else has seen or will ever see') ]
+my_hobbies = [Hobby('../static/img/books.jpg', 'Recipe Development', 'I make the coolest foods :))'),
+                Hobby('../static/img/beach.jpg', 'Biking', 'Bike is life! 🚵🚵🚵'),
+                Hobby('../static/img/deserttrek.jpg', 'Reading', 'Reading transports me into a world no one else has seen or will ever see'),
+                Hobby('../static/img/ukelele.png', 'Biking', 'Bike is life! 🚵🚵🚵'),
+                Hobby('../static/img/art gallery 2.jpg', 'Biking', 'Bike is life! 🚵🚵🚵'),
+                Hobby('../static/img/stinky.jpg', 'Biking', 'Bike is life! 🚵🚵🚵') ]
 
 class Education:
     def __init__(self, school_name, grad_year, description):
@@ -25,16 +28,18 @@ class Education:
         self.grad_year = grad_year
         self.description = description
 
-my_education = [Education('Current School', 'Graduation year', 'brief  description of your program of study, major and the like... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
-                Education('Previous School', 'Graduation year', 'brief  description of your program of study, major and the like... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
+my_education = [Education('Northwestern University', 'Bachelor of Science: Computer Science | Data Science and Engineering Minor', 
+                'Dean\'s List student majoring in Computer Science in McCormick School of Engineering. Mathematics Emerging Scholars program in fall 2021. Courses: Data Structures and Algorithms, Discrete Math, Machine Learning, Programming Fundamentals'),
+                ]
 
 class Experience:
     def __init__(self, experience_name, description):
         self.experience_name = experience_name
         self.description = description
 
-my_experiences = [Experience('Title1', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
-                 Experience('Title2', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
+my_experiences = [Experience('Major League Hacking | Production Engineering Fellow', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
+                 Experience('Google | Software Product Sprint Student', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
+                 Experience('Cravosity | Product Intern', 'description of your working experience... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
 
 my_additional_experiences = [Experience('Title1', 'description of volunteer work, hackathons etc... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.'),
                             Experience('Title2', 'description of volunteer work, hackathons etc... Est iure fugit in nulla officia hic delectus quia qui veniam voluptas vel consequuntur placeat qui esse dignissimos aut tempora laudantium! Aut repellat doloremque aut quod dolores ut repellat iusto quo nihil aperiam ut animi maxime et quia dolor.')]
@@ -46,9 +51,22 @@ class Project:
         self.title = title
         self.description = description
 
-my_projects = [Project('https://picsum.photos/id/17/200/300', 'Code the World', 'Super awesome project that I cannot wait to share with everyone!'),
-                Project('https://picsum.photos/id/200/200/300','Amazing Glace', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
-                Project('https://picsum.photos/id/110/200/300', 'KiKi\'s Delivery App', 'Everything delivered fast & furious.')]
+# mello, activism, boba shop, unveil
+my_projects = [Project('static/img/Mello Home Page.png', 'Mello Wellness Web App', 'Super awesome project that I cannot wait to share with everyone!'),
+                Project('static/img/demo_pic.png','ACTivism Chrome Extension', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
+                Project('static/img/bobaanalysis.png','Shop Rating Predictor', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
+                Project('https://picsum.photos/id/110/200/300', 'AutoAquaponics', 'Everything delivered fast & furious.')]
+
+
+# leadership: cs mentorshiop, epic, technovation
+class Leadership:
+    def __init__(self, img_url, title, description):
+        self.img_url = img_url
+        self.title = title
+        self.description = description
+
+my_leaderships = [Leadership('https://picsum.photos/id/17/200/300', 'title', 'description'),
+                    Leadership('https://picsum.photos/id/27/200/300', 'title', 'description')]
 
 class Location:
     def __init__(self, id, loc, img_urls, title, description):
@@ -65,16 +83,19 @@ my_locations = [Location('van',[43.75, 79.87],['https://picsum.photos/id/17/200/
 @app.route('/')
 @app.route('/index.html')
 def index():
-   return render_template('index.html', title="About Me", firstname="First", lastname="Last", url=os.getenv("URL"))
+   return render_template('index.html', title="Home", firstname="First", lastname="Last", url=os.getenv("URL"))
 
 @app.route('/hobbies.html')
 def hobbies():
-    return render_template('hobbies.html', title="Hobbies",hobbies=my_hobbies, locations=my_locations)
+    return render_template('hobbies.html', title="About",hobbies=my_hobbies, locations=my_locations)
 
+@app.route('/leaderships.html')
+def leadership():
+    return render_template('leaderships.html', title="Leadership", leaderships=my_leaderships)
 
 @app.route('/experiences.html')
 def experiences():
-    return render_template('experiences.html', education=my_education, experiences=my_experiences, add_experiences=my_additional_experiences, title="My Experiences")
+    return render_template('experiences.html', education=my_education, experiences=my_experiences, add_experiences=my_additional_experiences, title="Experience")
 
 @app.route('/projects.html')
 def projects():

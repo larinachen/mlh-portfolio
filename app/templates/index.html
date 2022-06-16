@@ -18,20 +18,36 @@
     </head>
 
     <body>
-        {% include 'includes/nav-bar.html'  %}
+        <div class="sticky">
+            {% include 'includes/nav-bar.html'  %}
+        </div>
+        
+
+        
+        <section id="home">
+            <img src="../static/img/Chen_Larina_Photo.jpg">
+            <h2>Yundi Chen</h2>
+            <p> Computer Science Student | Aspiring Software Engineer + Researcher</p>
+        </section>
+            
+        
 
         <section class="page-content">
-            <div class="pic-desc">
-                <img src="static/img/profile-pic.png" alt="Picture of Yourself" width="480" height="400">
-                <h1>{{firstname}} {{lastname}}</h1>
-                <h4>1-2 lines of basic information</h4>
-            </div>
-            
+
             <div class="about-me">
-                <h4> write about yourself here </h4>
+                <h4> A little about me </h4>
                 <p>Lorem ipsum dolor sit amet. Et quibusdam velit ut voluptas nobis et voluptate quibusdam non magni mollitia eum impedit tempora qui saepe perferendis. Et autem sapiente At aliquid enim aut facere alias. Sed rerum esse ab rerum distinctio qui doloribus voluptas vel iusto maiores ut internos magnam hic aliquam voluptatem quo quas accusamus. Sed impedit repudiandae et aspernatur voluptatem in distinctio nemo. </p><p>Eum galisum quam vel enim esse qui minus aperiam sit nihil iusto. Et suscipit consequatur rem enim dicta et similique aspernatur. </p><p>Sed velit adipisci sed fugiat officia rem illum nobis qui vero ipsa qui nulla officia vel facilis iure sed commodi ratione. Ad harum tempore aut molestias officiis hic consequuntur sequi. Ea voluptatem dolor aut neque voluptates sit maiores sapiente. </p>
                 
+                <div id="gallery">
+                    <img src="../static/img/cdp_2022.PNG">
+                    <img src="../static/img/me@epiccropped.jpg">
+                    <img src="../static/img/epic_clubfair.jpg">
+                    <img src="../static/img/me_shad_elec.jpg">
+                </div>
             </div>
+
+
+            
         </section>
 
         {% include 'includes/footer.html'  %}

@@ -4,18 +4,25 @@
     
 }
 
-img{
-    border-radius: 25px;
+#gallery{
+    height: 200px;
+    aspect-ratio: 5/3;
+    display: flex;
+    flex-direction: row;
+}
+
+#gallery img{
+    width: 100%;
+    height: auto;
+    margin-right: 10px;
 }
 
 
 .pic-desc, .about-me{
-    background-color: #e8d9d9;
     border-radius: 25px;
     margin: 30px;
-    width: 500px;
-    height: 600px;
+    width: 80%;
+    height: auto;
     padding: 10px;
-    box-shadow: 2px 4px rosybrown;
 }
 

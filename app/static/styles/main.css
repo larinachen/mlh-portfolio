@@ -43,3 +43,32 @@ h3 {
     background-color: #d1dce5;
     padding: 20px;
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  /* home seciton styles */
+#home{
+    height: 75vh;
+    margin: auto;
+    align-items: center;
+}
+
+#home img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15vh 40% 20px 40%;
+}
+
+#home h2, #home p{
+    margin:auto;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}

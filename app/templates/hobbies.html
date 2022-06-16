@@ -35,12 +35,27 @@
         <section class="page-content">
             <h3>Hobbies</h3>
             <section id="hobbies-container">
-
-                {% for hobby in hobbies %}
+                <div class="column">
+                    {% for hobby in hobbies[0:2] %}
                 
-                    {% include 'includes/hobby.html' %}
+                        {% include 'includes/hobby.html' %}
 
-                {% endfor %}
+                    {% endfor %}
+                </div>
+                <div class="column">
+                    {% for hobby in hobbies[2:4] %}
+                
+                        {% include 'includes/hobby.html' %}
+
+                    {% endfor %}
+                </div>
+                <div class="column">
+                    {% for hobby in hobbies[4:6] %}
+                
+                        {% include 'includes/hobby.html' %}
+
+                    {% endfor %}
+                </div>
 
             </section>
 
@@ -83,6 +98,19 @@
             </section>
         </section>
         
+        <section class="page-content">
+            <div class="pic-desc">
+                <img src="static/img/profile-pic.png" alt="Picture of Yourself" width="480" height="400">
+                <h1>{{firstname}} {{lastname}}</h1>
+                <h4>1-2 lines of basic information</h4>
+            </div>
+            
+            <div class="about-me">
+                <h4> write about yourself here </h4>
+                <p>Lorem ipsum dolor sit amet. Et quibusdam velit ut voluptas nobis et voluptate quibusdam non magni mollitia eum impedit tempora qui saepe perferendis. Et autem sapiente At aliquid enim aut facere alias. Sed rerum esse ab rerum distinctio qui doloribus voluptas vel iusto maiores ut internos magnam hic aliquam voluptatem quo quas accusamus. Sed impedit repudiandae et aspernatur voluptatem in distinctio nemo. </p><p>Eum galisum quam vel enim esse qui minus aperiam sit nihil iusto. Et suscipit consequatur rem enim dicta et similique aspernatur. </p><p>Sed velit adipisci sed fugiat officia rem illum nobis qui vero ipsa qui nulla officia vel facilis iure sed commodi ratione. Ad harum tempore aut molestias officiis hic consequuntur sequi. Ea voluptatem dolor aut neque voluptates sit maiores sapiente. </p>
+                
+            </div>
+        </section>
 
         <!-- footer -->
         {% include 'includes/footer.html'  %}

@@ -1,0 +1,39 @@
+#projects-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: hidden;
+    align-items: center;
+    margin: auto;
+}
+
+.leadership-card{
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 400px;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.leadership-card img{
+    width: 40%;
+    height: auto;
+    padding: 5px;
+}
+
+.leadership-card .txt{
+    flex-direction: column;
+    margin-left: 20px;
+    border-color: #ccc;
+}
+
+.txt h4{
+    color: black;
+}
+
+h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
