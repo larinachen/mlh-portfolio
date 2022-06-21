@@ -1,19 +1,25 @@
 #projects-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3%;
+    align-content: flex-start;
+    margin: auto;
+    margin-top: 40px;
 }
 
 .project-card{
     display: flex;
     flex-direction: column;
-    width: 30%;
+    overflow: hidden;
+    width: 100%;
     aspect-ratio: 1/1;
     margin-bottom: 10px;
     background-color: white;
-    border: 1px solid #ccc;
-    margin: 10px;
+    border: 3px solid #ccc;
+    margin: auto;
+    margin-bottom: 30px;
     box-shadow: 3px 3px 3px 3px rgb(222, 221, 221);
 }
 
@@ -36,4 +42,26 @@
 h3 {
     margin-left: 20px;
     margin-top: 20px;
+}
+
+/* nav bar */
+#projects-nav{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+}
+
+#projects-nav h3{
+    margin-right: 40px;
+    text-align: left;
+    padding-left: 0px;
+    margin-left: 0px;
+}
+
+#projects-nav button{
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid black;
 }

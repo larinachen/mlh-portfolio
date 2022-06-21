@@ -35,11 +35,19 @@
 
 /* styles shared accross all files */
 h3 {
-    margin-left: 20px;
+    margin-left: 0px;
     margin-top: 20px;
 }
 
 .page-content{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.home-desc{
     background-color: #d1dce5;
     padding: 20px;
 }

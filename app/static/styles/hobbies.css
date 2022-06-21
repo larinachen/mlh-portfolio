@@ -1,3 +1,24 @@
+/* about me */
+#about-me{
+    display: flex;
+    flex-direction: row;
+}
+.pic-desc, .about-me{
+    border-radius: 25px;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+}
+
+.pic-desc img{
+    width: auto;
+    height: 500px;
+}
+
+/* hobbies */
 #hobbies-container{
     display: flex;
     flex-direction: row;

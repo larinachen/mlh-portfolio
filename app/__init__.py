@@ -55,6 +55,7 @@ class Project:
 my_projects = [Project('static/img/Mello Home Page.png', 'Mello Wellness Web App', 'Super awesome project that I cannot wait to share with everyone!'),
                 Project('static/img/demo_pic.png','ACTivism Chrome Extension', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
                 Project('static/img/bobaanalysis.png','Shop Rating Predictor', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
+                Project('static/img/bobaanalysis.png','Basic AI Algorithms', 'Glaciers are awesome! 😍 Check out the world\'s coolest glaciers through this interactive game.'),
                 Project('https://picsum.photos/id/110/200/300', 'AutoAquaponics', 'Everything delivered fast & furious.')]
 
 
@@ -65,8 +66,9 @@ class Leadership:
         self.title = title
         self.description = description
 
-my_leaderships = [Leadership('https://picsum.photos/id/17/200/300', 'title', 'description'),
-                    Leadership('https://picsum.photos/id/27/200/300', 'title', 'description')]
+my_leaderships = [Leadership('https://picsum.photos/id/17/200/300', 'Northwestern Computer Science Mentorship', 'description'),
+                    Leadership('https://picsum.photos/id/27/200/300', 'EPIC Entrepreneurship Club', 'description'),
+                    Leadership('https://picsum.photos/id/37/200/300', 'Technovation Girls', 'description')]
 
 class Location:
     def __init__(self, id, loc, img_urls, title, description):
