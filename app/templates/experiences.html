@@ -25,7 +25,11 @@
 
         <section class="page-content">
             <section>
-                <h3>Education</h3>
+                <span id="heading">
+                    <h3>Education</h3> 
+                    <a href="https://s2.q4cdn.com/175719177/files/doc_presentations/Placeholder-PDF.pdf" target="_blank">View PDF Resume</a>
+                </span>
+                
                 {% for edu in education %}
                     {% include 'includes/education.html' %}
                 {% endfor %}
