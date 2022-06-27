@@ -1,9 +1,0 @@
-.gitignore
-.venv
-__pycache__
-*.pyc
-.env
-python3-virtualenv
-flask.sqlite
-.DS_Store
-mysql80-community-release-el7-5.noarch.rpm
