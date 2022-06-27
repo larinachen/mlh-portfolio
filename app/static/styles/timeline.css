@@ -9,19 +9,19 @@
 
 input, button{
     align-self: center;
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
 label {
     margin: auto;
-    width: 80%;
+    width: 100%;
     text-align: left;
     margin-top: 20px;
 }
 
 #posts {
     margin: auto;
-    width: 80%;
+    width: 100%;
     height: 40vh;
 }
