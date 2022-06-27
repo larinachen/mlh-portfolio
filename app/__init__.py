@@ -42,7 +42,6 @@ def post_timeline_post():
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     print([name,email,content,timeline_post])
-    print("hello")
 
     return model_to_dict(timeline_post)
 
@@ -57,7 +56,7 @@ def get_timeline_post():
     }
 
 # create a DELETE endpoint
-@app.rount('api/timeline_post', methods=['POST'])
+@app.route('/api/timeline_post', methods=['DELETE'])
 def delete_timeline_post():
     pass
     # TODO: research how to delete with mysql
@@ -159,6 +158,10 @@ def experiences():
 @app.route('/projects.html')
 def projects():
     return render_template('projects.html', title="Projects", projects=my_projects)
+
+@app.route('/timeline.html')
+def timeline():
+    return render_template('timeline.html', title="Timeline")   
 
 # start the development server using the run() method
 if __name__ == "__main__":
