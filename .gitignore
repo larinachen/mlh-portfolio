@@ -2,6 +2,7 @@
 __pycache__
 *.pyc
 .env
-virtualenv
+python3-irtualenv
 flask.sqlite
 .DS_Store
+mysql80-community-release-el7-5.noarch.rpm
