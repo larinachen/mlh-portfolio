@@ -1,9 +1,10 @@
 import os
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from dotenv import load_dotenv
 from peewee import *
 import datetime
 from playhouse.shortcuts import model_to_dict
+import re
 
 # loading environment variables in .env
 load_dotenv()
@@ -38,13 +39,24 @@ mydb.create_tables([TimelinePost])
 # create POST endpoint
 @app.route('/api/timeline_post', methods=['POST'])
 def post_timeline_post():
+    if 'name' not in request.form:
+        return "Invalid name", 400
+    if 'content' not in request.form:
+        return "Invalid content", 400
+    if 'email' not in request.form:
+        return "Invalid email", 400
     name = request.form['name']
     email = request.form['email']
     content = request.form['content']
+    email_regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
+    if name == "":
+        return "Empty name", 400
+    if content == "":
+        return "Empty content", 400
+    if not re.search(email_regex, email):
+        return "Invalid email", 400
+
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
-
-    print([name,email,content,timeline_post])
-
     return model_to_dict(timeline_post)
 
 # create GET endpoint
