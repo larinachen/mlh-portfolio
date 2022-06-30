@@ -44,5 +44,10 @@ class AppTestCase(unittest.TestCase):
         assert "timeline_posts" in json_get
         assert len(json_get["timeline_posts"]) == 1
         
-        # TODO add more tests relating to the /api/timeline_post GET and POST APIs
-        # TODO add more tests relating to the timeline page
+    def test_timeline(self):
+        response = self.client.get("/timeline.html")
+        assert response.status_code == 200
+        html = response.get_data(as_text=True)
+        assert '<title>Timeline</title>' in html
+        assert '<form id="form">' in html
+        assert 'Timeline Logs' in html
