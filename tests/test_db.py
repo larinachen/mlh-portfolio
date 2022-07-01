@@ -25,7 +25,7 @@ class TestTimelinePost(unittest.TestCase):
         # Close connection to db
         test_db.close()
 
-    def test_timeline_post(self):
+    def test_create_timeline_post(self):
         # Create 2 timeline posts
         first_post = TimelinePost.create(name='John Doe', email='john@example.com',
             content='Hello World, I\'m John!')
@@ -33,3 +33,21 @@ class TestTimelinePost(unittest.TestCase):
         second_post = TimelinePost.create(name='Jane Doe', email='jane@example.com',
             content='Hello World, I\'m Jane!')
         assert second_post.id == 2
+
+    def test_get_timeline_post(self):
+        # Create 2 timeline posts
+        first_post = TimelinePost.create(name='John Doe', email='john@example.com',
+            content='Hello World, I\'m John!')
+        second_post = TimelinePost.create(name='Jane Doe', email='jane@example.com',
+            content='Hello World, I\'m Jane!')
+
+        get_first = TimelinePost.get(TimelinePost.id == 1)
+        get_second = TimelinePost.get(TimelinePost.id == 2)
+
+        assert get_first.name == 'John Doe'
+        assert get_first.email == 'john@example.com'
+        assert get_first.content == 'Hello World, I\'m John!'
+
+        assert get_second.name == 'Jane Doe'
+        assert get_second.email == 'jane@example.com'
+        assert get_second.content == 'Hello World, I\'m Jane!'
