@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -27,6 +30,9 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
+
+      - name: print project root directory
+        run: ssh my-vps 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
 
       - name: Deploy Site
         run: ssh my-vps '~/redeploy-site.sh'
